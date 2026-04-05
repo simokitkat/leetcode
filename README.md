@@ -14,30 +14,50 @@ You need to have **Node.js** installed.
 npm install
 ```
 
+## Structure
+
+```
+solutions/
+├── ts/           # Write TypeScript here (source)
+│   ├── easy/
+│   ├── med/
+│   └── hard/
+└── js/           # Compiled JavaScript (auto-generated)
+    ├── easy/
+    ├── med/
+    └── hard/
+```
+
 ## Usage
 
-### JavaScript
+### TypeScript (development)
 
-```bash
-node <path-to-js-file>
-```
-
-Example:
-
-```bash
-node solutions/js/easy/twoSum.js
-```
-
-### TypeScript
-
-```bash
-npx tsx <path-to-ts-file>
-```
-
-Example:
+Test your TypeScript code directly:
 
 ```bash
 npx tsx solutions/ts/easy/twoSum.ts
+```
+
+### Compile to JavaScript
+
+Once your TypeScript solution works, compile it:
+
+```bash
+npm run build
+```
+
+This outputs the compiled JS files to `solutions/js/` with the same folder structure.
+
+For auto-compilation on save:
+
+```bash
+npm run build:watch
+```
+
+### Run compiled JavaScript
+
+```bash
+node solutions/js/easy/twoSum.js
 ```
 
 ## Reference

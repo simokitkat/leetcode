@@ -4,7 +4,8 @@
   "description": "LeetCode problem solutions in JavaScript and TypeScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "build:watch": "tsc --watch"
   },
   "keywords": [
     "leetcode",
